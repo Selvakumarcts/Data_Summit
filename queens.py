@@ -165,12 +165,9 @@ print(qconfig)
 
 a = qconfig
 b= ' '.join(map(str, a))
-#print(b)
-#json={"qconfig": b ,"userID":111 }
-#print(json)
+
 
 import requests
 url='https://lf8q0kx152.execute-api.us-east-2.amazonaws.com/default/computeFitnessScore'
-#x=requests.post(url,json={"qconfig": b ,"userID":111 }) #,"githubLink":"<<git hub link>>"})
-x=requests.post(url,json={"qconfig": b ,"userID":540434,"githubLink":"<<git hub link>>"}) 
+x=requests.post(url,json={"qconfig": b ,"userID":540434,"githubLink":'https://github.com/Selvakumarcts/Data_Summit/blob/master/queens.py'}) 
 print(x.text)
